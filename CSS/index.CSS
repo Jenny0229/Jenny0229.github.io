@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.intro {
+    height: 400px;
+    display: flex;
+    padding-left: 18%;
+    padding-top: 2%;
+    margin-top: 1.5%;
+    padding-right: 13%;
+
+}
+
+.profile-pic {
+    width: 40%;
+    padding-right: 0;
+    align-items: right;
+    height: 100%;
+    margin-right: -3%;
+}
+
+.profile-pic img{
+    height: 100%;
+}
+
+.opening-sentence{
+    margin-left: 5%;
+}
+.opening-sentence p{
+    
+    font-size: 55px;
+    color: black;
+    font-family: "Permanent Marker", cursive;
+    
+}
+
+.projects,
+.extracurriculars{
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* Creates two rows */
+    grid-template-columns: 1fr 1fr; /* Creates two columns */
+    justify-content: center; /* centers items horizontally */
+    gap: 4%;
+    
+}
+
+.proj{
+    display: flex;
+    flex-direction: column;
+}
+
+.description{
+    word-wrap: break-word;
+    padding-right: 0;
+}
+
+.project-picture img,
+.extrac-picture img {
+    border-radius: 3%; /* Add a border radius for a softer look */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Add a subtle border */
+    width: 100%;
+    height: 100%;
+    
+}
+
+.title{
+    font-size: 22px;
+    margin-bottom: 3%;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    position: relative;
+    display:inline-block;
+}
+
+.title::after {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions the pseudo-element absolutely within the .title */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%; /* Covers the bottom half of the text */
+    background-color: #bae4f5;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1; /* Places the pseudo-element behind the text */
+}
+
+
+.others{
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 2%;
+}
+
+.clickable-div {
+    text-decoration: none; /* Remove underline from text */
+    color: inherit; /* Inherit text color */
+  }
+
+.project-picture,
+.extrac-picture{
+    margin-bottom: 3%;
+}
+
+#navbar-paceholder{
+    margin-top: -20px;
+}
+
+.section-divider {
+    border: none; /* Remove default border */
+    height: 1px; /* Set the height of the line */
+    background-color: #ccc; /* Set the color of the line */
+    width: 100%;
+}
+
+.project-section,
+.extracurricular-section{
+    margin-top: 2%;
+    padding-left: 18%;
+    padding-right: 18%;
+    margin-bottom: 5%;
+}
+
+/* Add keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to elements */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro, .project-section, .extracurricular-section {
+    animation: slideIn 1s ease-in-out;
+}
+
+.project-picture img,
+.extrac-picture img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-picture img:hover,
+.extrac-picture img:hover{
+    transform: scale(1.05);
+}
+
+.proj:hover .title::after{
+    transform: scaleX(1); /* Expands the pseudo-element to full width */
+}

@@ -1,0 +1,68 @@
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    height: 100%;
+    
+}
+
+/* Additional styles for the section divider */
+.section-divider {
+    border: none; /* Remove default border */
+    height: 1px; /* Set the height of the line */
+    background-color: #ccc; /* Set the color of the line */
+    width: 100%;
+}
+
+.pics {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    gap: 8px;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.pic {
+    width: 100%;
+    display: block; /* This ensures there is no extra space below the image */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    width: 100%;
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+    opacity: 0; /* Start fully transparent */
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Become fully opaque */
+}
+
+
+.text {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+

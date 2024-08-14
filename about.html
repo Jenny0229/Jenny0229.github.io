@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <link rel = "stylesheet" href = "CSS/about.CSS">
+        <script src="https://kit.fontawesome.com/adda115765.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div id="navbar-placeholder"></div>
+        <hr class="section-divider">
+        <div class = "main">
+            <div class = "profile">
+                <div class = "headshot">
+                    <img style = "height: 100%; width: 100%; border-radius: 50%;" src="CSS/pics/about/headshot.png">
+                </div>
+                <div class = "name" style="text-align: center;">
+                    <p style="font-size: 25px; font-weight: 600; line-height: 0.6; margin-bottom: 0;">Zhenqi(Jenny) Wang</p>
+                    <p>CS @ UM | Music Minor @ UM <br>SWE Intern @ UMTRI | Rewriting The Code</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/Jenny0229" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/zhenqi-wang-172986256/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/jenny_zhenqiw/?next=%2F" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class = "intro">
+                <p>Hey, I'm a rising junior at University of Michigan with a major in computer science and minor in music. I'm particularly interested in human-centered engineering and interdisciplinary projects that combines two or more fields I like(see below). My approach is adaptive and driven by a strong desire to learn and master new skills that can help solve real-world problems.
+</p>
+                <div class = "specific">
+                    <div  style="flex: 2">
+                        Tech wise, I'm interested in: <br>
+                        <ul>
+                            <li>Full-stack development</li>
+                            <li>Embedded technology</li>
+                            <li>Logic design</li>
+                            <li>Complex systems</li>
+                            <li>Machine learning</li>
+                        </ul>
+                   
+                    </div>
+                    <div style="flex: 3">
+                        In my spare time, I'd like to: <br>
+                        <ul>
+                            <li>Sing: I'm a Soprano at Arts Chorale Choir</li>
+                            <li>Play The Piano</li>
+                            <li>Travel & Take Pictures: check out <a href="gallery.html">here</a> for pics I took all over.</li>
+
+                            <li>Watch Movies</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+        </script>
+    </body>
+</html>

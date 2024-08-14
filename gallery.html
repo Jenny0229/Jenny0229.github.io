@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+        <link rel = "stylesheet" href = "CSS/gallery.CSS">
+    </head>
+    <body>
+        <div id="navbar-placeholder" style = "height: 80px;"></div>
+        <hr class="section-divider">
+       
+        <div class = "pics">
+            <div class = "col" >
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_1770.png" class="pic">
+                    <div class="overlay"><div class="text">Xinjiang, CN</div></div>
+                </div>
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/mmexport1587745917764.png" class = "pic">
+                    <div class="overlay"><div class="text">Gansu, CN</div></div>
+                </div>
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_8962.png" class = "pic">
+                    <div class="overlay"><div class="text">Yellow Stone National Park, US</div></div>
+                </div>
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/retouch_2022022011524997.png" class = "pic">
+                    <div class="overlay"><div class="text">Shanghai, CN</div></div>
+                </div>    
+            </div>
+            <div class = "col">
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_2206.png" class = "pic">
+                    <div class="overlay"><div class="text">Xinjiang, CN</div></div>
+                </div>    
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_3114.png" class = "pic">
+                    <div class="overlay"><div class="text">Seoul, KR</div></div>
+                </div>    
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_7734.png" class = "pic">
+                    <div class="overlay"><div class="text">Los Angeles, US</div></div>
+                </div> 
+                
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_5894.png" class = "pic">
+                    <div class="overlay"><div class="text">San Diego, US</div></div>
+                </div> 
+            </div>
+            <div class = "col">
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_0017.png" class = "pic">
+                    <div class="overlay"><div class="text">Garzê Tibetan Autonomous Prefecture, CN</div></div>
+                </div> 
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/DSC07309.png" class = "pic">
+                    <div class="overlay"><div class="text">Xinjiang, CN</div></div>
+                </div> 
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_3330.png" class = "pic">
+                    <div class="overlay"><div class="text">Qingdao, CN</div></div>
+                </div> 
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_2080.png" class = "pic">
+                    <div class="overlay"><div class="text">Tibet, CN</div></div>
+                </div> 
+            </div>
+            <div class = "col">
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_1138.png" class = "pic">
+                    <div class="overlay"><div class="text">Tibet, CN</div></div>
+                </div>
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/DSC07528.png" class = "pic">
+                    <div class="overlay"><div class="text">Xinjiang, CN</div></div>
+                </div>
+
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_5800.png" class = "pic">
+                    <div class="overlay"><div class="text">San Diego, US</div></div>
+                </div>
+                <div class="image-container">
+                    <img src="CSS/pics/gallery/IMG_7282.png" class = "pic">
+                    <div class="overlay"><div class="text">Santa Babara, US</div></div>
+                </div>
+                
+             
+               
+            </div>
+        </div>
+
+        
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+        </script>
+    </body>
+</html>

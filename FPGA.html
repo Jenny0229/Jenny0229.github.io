@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FPGA Board</title>
+        <link rel = "stylesheet" href = "CSS/posts.CSS">
+    </head>
+    <body>
+        <div id="navbar-placeholder"></div>
+        <hr class="section-divider">
+
+        <div class = "content">
+            <div class = "post">
+                <div class = "title">From Code to Circuit: My First Verilog Adventure</div>
+                <div class = "time">
+                    Last Updated: Jun 7th, 2024
+                </div>
+                <div>
+                    <img src="/CSS/pics/FPGA.png" class = "pic"> 
+                </div>
+                <div class = "subtitle" id="overview">&#x1F50D;Overview</div>
+                <div class = "paragraph" style="line-height: 2;">
+                    Duration: Mar 2024 - Apr 2024
+                    <br> Tool: Verilog, Quartus, FPGA Board
+                    <br> Key Words: Digital Circuits | Logic Design | CAD Tools
+                </div>
+                <div class = "subtitle" id="tldr">✅  What I Did</div>
+                <div class = "paragraph">
+                    In a recent logic design class, I got my first taste of working with Verilog to design a four-function calculator. This was a completely new experience for me, and I found it hard yet fulfilling. <br><br>
+                    
+                    Using the CAD tool and the FPGA board to bring the design to life was particularly exciting—it was amazing to see the hardware respond to the code I wrote. I had always thought of a calculator as a simple, everyday tool, but this project made me realize the complex logic that operates behind the scenes. It also opened my eyes to the fact that many technologies that seem simple are backed up by complicated and well-through-out logic. Although it was a struggle at first, I ended up really enjoying the process. I was so proud when I saw that with all the tedious and complex logic gates I added, my calculator was able to work as intended. <br><br>
+
+This project sparked a new interest in hardware design, and it has inspired me to take an embedded systems course next. The hands-on experience I gained with Verilog and the FPGA board was invaluable, and I'm looking forward to building on that knowledge in future projects.
+                </div>
+            </div>
+            <div class = "outline">
+                <a href="#overview">Overview</a><br>
+                <a href="#tldr">What I Did</a><br><br>
+            </div>
+        </div>
+
+        
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+        </script>
+    </body>
+</html>

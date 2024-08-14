@@ -1,0 +1,84 @@
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    height: 100%;
+    font-size: 18px ;
+    
+}
+
+.section-divider {
+    border: none; /* Remove default border */
+    height: 1px; /* Set the height of the line */
+    background-color: #ccc; /* Set the color of the line */
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    flex: row;
+    height: 600px;
+}
+
+.profile{
+    margin-top: 3%;
+    flex: 2;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name{
+    text-align: center;
+}
+
+.intro{
+    margin-top: 3%;
+    margin-right: 8%;
+    flex: 3;
+}
+
+.headshot{
+    width: 200px;
+    height: 200px; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons i {
+    font-size: 2rem; /* Adjust icon size as needed */
+    color: #000; /* You can change this color to match your website's theme */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.specific{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.profile, .intro, .social-icons a, .intro p, .specific div {
+    opacity: 0; /* Start from invisible */
+    animation: fadeIn 1s ease forwards;
+}

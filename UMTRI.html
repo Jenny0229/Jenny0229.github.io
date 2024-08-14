@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data To Go</title>
+        <link rel = "stylesheet" href = "CSS/posts.CSS">
+    </head>
+    <body>
+        <div id="navbar-placeholder"></div>
+        <hr class="section-divider">
+       
+        <div class = "content">
+            <div class = "post">
+                <div class = "title">Data To Go: A Customizable Mobile App for Transportation Research Data Collection in the Wild</div>
+                <div class = "time">
+                    Last Updated: Jun 7th, 2024
+                </div>
+                
+                <div style = "padding-left: 5%; margin-top: 5%;">
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/RrHW3lqkMdo?si=jXsOkEpEZvR6CmSa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class = "subtitle" id="overview">&#x1F50D;Overview</div>
+                <div class = "paragraph" style="line-height: 2;">
+                    Duration: May 2024 - Present
+	                <br>Tool: React Native, Figma, Qualtrics, AWS
+	                <br>Role: Full-stack developer
+                    <br>Affiliation: University of Michigan Transportation Research Institute(UMTRI)
+                </div>
+                <div class = "subtitle" id="tldr">&#128517; TL; DR</div>
+                <div class = "paragraph">
+                    During my summer internship, I developed "Data to Go," a mobile app designed for real-time, in-situ data collection to study various transportation behaviors. This tool captures vehicle location, acceleration, and participant responses directly in the field without needing direct interaction, which greatly enhances the relevance and scope of the data. Key achievements include: <br>
+                    <ul>
+                        <li>Pilot Testing: Conducted comparative tests between web and mobile platforms, choosing the mobile app for its ability to reliably collect data in background operations. </li>
+                        <li>Acceleration Measurement: Overcame challenges such as device variability and background data collection restrictions on Android through innovative solutions like sensor fusion. </li>
+                        <li>Learning and Adaptation: Adapted to a hands-on learning approach, teaching myself React Native and navigating complex project troubleshooting without traditional guidance. </li>
+                        <li>Next Steps: Plans to enhance the app include implementing a robust AWS database, introducing multimodal interaction prompts, and creating a customizable UI for researchers. </li> </ul>
+                        This project not only improved my technical skills but also provided valuable insights into the practical uses of AI tools and the necessity of critical thinking in software engineering.
+                </div>
+                <div class = "subtitle" id="background">&#x1F9E9; Background</div>
+                <div class = "paragraph">
+                    Traditional transportation research often relies on lab-based data collection, where direct interaction with participants is necessary. This approach limits the scope and environmental relevance of the data, particularly when studying driving behaviors and passenger experiences in the wild. To overcome these constraints, we are developing "Data to Go," a versatile mobile app designed for in-situ data collection. This tool automates the gathering of vehicle location, acceleration, and participant responses, eliminating the need for direct interaction with participants. It can also be customized for different research studies, such as paratransit evaluations, in-vehicle passenger motion sickness, and teenage driver behavior, etc.
+                    
+                </div>
+                <div>
+                    <img src="/CSS/pics/UMTRI/workflow.png" class = "pic" style="width: 60%; padding-left: 20%;"> 
+                </div>
+                <div class = "subtitle" id="process">&#x2705; What I Did</div>
+                <div class = "paragraph">
+                    <ul>
+                        <li>
+                            <div style="font-weight: 600;">
+                                Pilot Testing on Web and Mobile App 
+                            </div>
+                            
+		To determine the best platform for our final product, we developed and tested preliminary demos on  both a mobile app and website. We tested Android Web vs iOS Web, Android Web vs Android App, iOS Web vs iOS App, and Android app vs iOS app. These tests were designed to assess each platform’s capability in obtaining the required data, and also to test performance differences between libraries and operating systems. Based on the pilot test results comparing the mobile app demo vs. website demo, the mobile app platform was selected primarily based on the app’s ability to gather continuous and stable data when screen locks or when users are using other apps. This was a fun experience for me in that this is my first time doing a comparative test in computer science and I got that chance to improve what I developed based on performance from different trials.
+        <div class = "pic_group">
+            <img src="/CSS/pics/UMTRI/pilot.png" class = "pic_group_sub"> 
+            <img src="/CSS/pics/UMTRI/map.png" class = "pic_group_sub"> 
+        </div>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <div style="font-weight: 600;">
+                                Acceleration Measure
+                            </div>
+                            
+                            Among the three main types of data we handle—GPS location, acceleration, and survey responses—measuring acceleration has proven to be the most challenging. Here are a few hurdles we've encountered: <ul><br>
+                                <li>
+                                    Device Variability: <br> Acceleration data can vary significantly between different operating systems and even between models of the same brand.
+                                </li> <br>
+                                <li>
+                                    Background Data Collection on Android: <br> Android imposes strict limitations on background data collection, necessitating continuous user notifications via a foreground service. Unfortunately, there are no existing packages that collect sensor data in the background, which requires additional custom development.
+                                </li> <br>
+                                <li>
+                                    Gravity Interference: <br>The initial package we used to collect acceleration data included gravitational effects in the results. To address this, I consulted with Robotics students at our institute and ultimately implemented a sensor fusion solution using the Madgwick filter, which combines data from the gyroscope, accelerometer, and magnetometer to isolate and remove the influence of gravity.
+                                </li> 
+                            </ul> <br>
+This phase of the project was both demanding and rewarding, pushing us through a cycle of trial, error, and eventual success. It was incredibly satisfying to develop a solution that effectively addressed these complexities.
+
+                        </li>
+                        <div>
+                            <img src="/CSS/pics/UMTRI/acc.png" class = "pic"> 
+                        </div>
+                    </ul>
+                </div>
+                
+                <div class = "subtitle" id="next">&#x1F3C6; Next Steps</div>
+                <div class = "paragraph">
+                    During my summer internship, I developed the core functionality of our app, focusing on optimizing the data collection process, which is now fully operational. Here are the next steps we plan to take for next semester to deploy the app for real use:
+                    <ul>
+                        <li>
+                            Database Management: <br> We will implement a robust database management system using AWS to ensure data integrity and security.
+                        </li>
+                        <li>
+                            Multimodal Prompts: <br> To enhance user engagement, we will introduce a variety of prompts that utilize auditory/verbal feedback and haptic vibrations.
+                        </li>
+                        <li>
+                            Customizable UI for Researchers: <br>An additional user interface will be created to allow researchers to add study-specific customizations easily.
+                        </li>
+                    </ul>
+These enhancements are designed to improve the functionality and user experience of our app, making it more versatile and researcher-friendly.
+
+                </div>
+                <div class = "pic_group">
+                    <img src="/CSS/pics/UMTRI/myself.png" class = "pic_group_sub3"> 
+                    <img src="/CSS/pics/UMTRI/group.png" class = "pic_group_sub4"> 
+                </div>
+                <div class = "subtitle" id="highlight">&#x1F4A1; Reflections</div>
+                <div class = "subsubtitle">AI and Software Engineering: Tools, Not Replacements
+                </div>
+                <div class = "paragraph">
+                    With the increasing popularity of AI and ChatGPT, there’s a lot of talks on AI replacing entry-level SWE jobs.  I was kind of on board with that idea until this project gave me a whole new perspective. For example, I tried using GPT to help debug while working with the Expo Location package. I told GPT to set the data collection frequency to every second. Unexpectedly, no data was collected at all, and I couldn't figure out the problem. After a full day of troubleshooting, I discovered that the frequency parameter GPT suggested didn't even exist—it was a made-up.
+<br><br>This was a big wake-up call. While GPT is great for simple tasks or code snippets, it’s not so good with the complicated stuff. It’s still crucial for software engineers to verify the accuracy of AI-generated outputs. This experience showed that AI tools like GPT are just that—tools. They can boost our productivity but are not a substitute for the critical thinking and problem-solving skills that are essential in software development.
+<br><br>Through this project, I learned to balance the use of AI and my own thinking and coding. I also learned the importance of thorough troubleshooting and debugging in managing large, complex projects, and found that maintaining clean and well-organized code is crucial in identifying and resolving bugs effectively. 
+
+                </div>
+                <div>
+                    <img src="/CSS/pics/UMTRI/symposium.jpg" class = "pic"> 
+                </div>
+                <div class = "subsubtitle">Embracing Self-Directed Learning
+                </div>
+                <div class = "paragraph">
+                    This project really strengthened my ability to dive into the unknown and pick up new skills quickly. Growing up, I was accustomed to the traditional learning pattern where I'd listen to lectures, absorb all the concepts from teachers, and then apply what I learned on homework. However, I've found that computer science doesn't always follow this pattern. Often, there’s no one to teach you exactly what to do, and you have to figure things out using resources like GitHub, YouTube, StackOverflow, and various documentation.
+                   <br><br> Before this project, I had never developed a mobile app. I taught myself React Native from scratch. This was both challenging and rewarding. I discovered that learning through actual implementation sticks with me far more than just studying the concepts theoretically. I've come to appreciate this hands-on learning approach, and I’m pleased to find that I can now learn new things more quickly and am more open to exploring unfamiliar territories.
+                    
+                </div>
+                
+
+            </div>
+            <div class = "outline" style = "line-height: 2.5;">
+                <a href="#overview">Overview</a><br>
+                <a href="#tldr">TL; DR</a><br>
+                <a href="#background">Background</a><br>
+                <a href="#process">What I Did</a><br>
+                <a href="#next">Next Steps</a><br>
+                <a href="#highlight">Reflections</a><br>
+            </div>
+           
+        </div>
+       
+
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+        </script>
+    </body>
+</html>

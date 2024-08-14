@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Projects</title>
+        <link rel = "stylesheet" href = "CSS/index.CSS">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--<div class = "zhenqi"><h1>Zhenqi's World 👋</h1></div>-->
+        <div id="navbar-placeholder" style = "height: 100px; display: flex; justify-content: center; padding-top: 10px;"></div>
+        <hr class="section-divider">
+       
+
+        <div class = "intro">
+            <div class ="profile-pic">
+                <img src="pics/profile2.png" >
+            </div>
+            <div class = "opening-sentence">
+                <p>Hi! I'm Zhenqi Wang, a passionate CS student at University of Michigan</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class = "project-section">
+            <div>
+                <p style="font-size: 25px; font-weight: 700;margin-bottom: 2%;">Projects 👩‍💻</p></div>
+            <div class = "projects">
+                <a href="UMTRI.html" class="clickable-div">
+                <div class = "proj">
+                    <div class = "project-picture">
+                        <img src="pics/UMTRI.png">
+                    </div>
+                    <div class = "description">
+                        <p class = "title">Data To Go</p>
+                        <p class = "others">Mobile App with location tracking, sudden movement detection, and survey collection for transportation research</p>
+                        <p class = "others">May 2024 - Present</p>
+                    </div>
+                   
+                </div>
+                </a>
+                <a href="affirmative.html" class="clickable-div">
+                <div class = "proj" >
+                    <div class = "project-picture">
+                        <img src="pics/affirmative.png">
+                    </div>
+                    <div class = "description">
+                        <p class = "title">Affirmative</p>
+                        <p class = "others">Healthcare Navigation Platform For Care Navigators in Transgender Community</p>
+                        <p class = "others">Sep 2023 - Feb 2024</p>
+                    </div>
+                   
+                </div>
+                </a>
+                <a href="FPGA.html" class="clickable-div">
+                <div class = "proj">
+                    <div class = "project-picture">
+                        <img src="pics/FPGA-board.png">
+                    </div>
+
+                    <div class = "description">
+                        <p class = "title">FPGA Board-based Calculator</p>
+                        <p class = "others">EECS270 Logic Design Final Project</p>
+                        <p class = "others">Apr 2024</p>
+                    </div>
+                   
+                </div>
+                </a>
+                <div class = "proj">
+                    <div class = "project-picture">
+                        <img src="pics/jonetix.png">
+                    </div>
+                    <div class = "description">
+                        <p class = "title">Jonetix-Coming Soon</p>
+                        <p class = "others">FIDO Cybersecurity Start-up Project</p>
+                        <p class = "others">May 2024 - Jul 2024</p>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+        <div class = "extracurricular-section">
+            <div><p style="font-size: 25px; font-weight: 700;margin-bottom: 2%;">Activities 🤹‍♀️</p></div>
+            <div class = "extracurriculars">
+                <a href="palantir.html" class="clickable-div">
+                <div class = "proj">
+                    <div class = "extrac-picture">
+                        <img src="pics/palantir.jpg">
+                    </div>
+                    <div class = description>
+                        <p class = "title">2024 Palantir Launch Program</p>
+                        <p class = "others">Mar 2024</p>
+                    </div>  
+                </div>
+                </a>
+                <a href="teals.html" class="clickable-div">
+                <div class = "proj">
+                    <div class = "extrac-picture">
+                        <img src="pics/TEALS2.png">
+                    </div>
+                    <div class = description>
+                        <p class="title">2023-2024 Microsoft TEALS program</p>
+                        <p class = "others">CS Teaching Assistant at Local High School</p>
+                        <p class = "others">Sep 2023 - Apr 2024</p>
+                    </div>
+                
+                </div>
+                </a>
+            </div>
+        </div>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('navbar-placeholder').innerHTML = html;
+                });
+        </script>
+    </body>
+</html>
+
