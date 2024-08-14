@@ -118,27 +118,6 @@
                     document.getElementById('navbar-placeholder').innerHTML = html;
                 });
         </script>
-            <script>
-                // Function to load CSS and check if it loads successfully
-                function loadCSS(url) {
-                    var link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = url;
-        
-                    link.onload = function() {
-                        console.log('CSS loaded successfully!');
-                    };
-        
-                    link.onerror = function() {
-                        console.error('Failed to load CSS file.');
-                    };
-        
-                    document.head.appendChild(link);
-                }
-        
-                // Call the function with your CSS file's path
-                loadCSS('CSS/navbar.CSS');
-            </script>
         </head>
         
     </body>
